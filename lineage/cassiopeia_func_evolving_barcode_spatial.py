@@ -38,14 +38,6 @@ bam_fp = cas.pp.filter_bam(
 	n_threads=n_threads,
 )
 
-# error_correct_cellbcs_to_whitelist
-#bam_fp = cas.pp.error_correct_cellbcs_to_whitelist(
-#   	bam_fp,
-#	whitelist='/syn1/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/SPATIAL/S3a/barcodeToPos_CID.txt',
-#	output_directory=output_directory,
-#	n_threads=n_threads,
-#)
-
 # collapse
 umi_table = cas.pp.collapse_umis(
 	bam_fp,
