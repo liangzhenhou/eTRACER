@@ -10,7 +10,6 @@
 #SBATCH -t 00:00:00                # time limitation
 #SBATCH --array=1-15
 
-
 gene_info=$(cat /synology/liangzhen/jinhua_jilab_project/reference/EPC_scRNA-seq_amplicon_reference.txt | sed -n ${SLURM_ARRAY_TASK_ID}p)
 cut_sites=(0 80 91 93 87 63 89 89 84 86 94 48 87 89 85 89)
 
