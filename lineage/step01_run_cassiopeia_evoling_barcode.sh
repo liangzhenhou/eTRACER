@@ -4,10 +4,10 @@
 #SBATCH -o /synology/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/log/cassiopeia_T2.out       
 #SBATCH -e /synology/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/log/cassiopeia_T2.error
 #SBATCH -p all
-#SBATCH -N 1                      # apply for one node
+#SBATCH -N 1                      
 #SBATCH -n 15
 #SBATCH --mem=20G
-#SBATCH -t 00:00:00                # time limitation
+#SBATCH -t 00:00:00                
 #SBATCH --array=1-15
 
 gene_info=$(cat /synology/liangzhen/jinhua_jilab_project/reference/EPC_scRNA-seq_amplicon_reference.txt | sed -n ${SLURM_ARRAY_TASK_ID}p)
