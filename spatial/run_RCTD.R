@@ -38,13 +38,13 @@ coords <- spatial@meta.data[,c("x", "y")]
 coords[is.na(colnames(coords))] <- NULL
 query <- SpatialRNA(coords, counts, colSums(counts))
 
-#RCTD <- create.RCTD(query, reference, max_cores = 8)
-#RCTD <- run.RCTD(RCTD, doublet_mode = 'doublet')
-#saveRDS(RCTD,'/syn1/liangzhen/jinhua_jilab_project/result/SPATIAL/T2/RCTD_results_doublet.rds')
+RCTD <- create.RCTD(query, reference, max_cores = 8)
+RCTD <- run.RCTD(RCTD, doublet_mode = 'doublet')
+saveRDS(RCTD,'/syn1/liangzhen/jinhua_jilab_project/result/SPATIAL/T2/RCTD_results_doublet.rds')
 
-#RCTD <- create.RCTD(query, reference, max_cores = 8)
-#RCTD <- run.RCTD(RCTD, doublet_mode = 'full')
-#saveRDS(RCTD,'/syn1/liangzhen/jinhua_jilab_project/result/SPATIAL/T2/RCTD_results_full.rds')
+RCTD <- create.RCTD(query, reference, max_cores = 8)
+RCTD <- run.RCTD(RCTD, doublet_mode = 'full')
+saveRDS(RCTD,'/syn1/liangzhen/jinhua_jilab_project/result/SPATIAL/T2/RCTD_results_full.rds')
 
 RCTD <- create.RCTD(query, reference, max_cores = 8)
 RCTD <- run.RCTD(RCTD, doublet_mode = 'multi')
