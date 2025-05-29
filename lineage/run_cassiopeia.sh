@@ -22,5 +22,4 @@ fastq_path=/synology/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/${timePo
 outdir=/synology/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/${timePoint}/a3026/cassiopeia_result
 mkdir -p ${outdir}
 
-
 /home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /synology/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/cassiopeia_func.py ${innerBC} ${gene_name}  ${cut_site} ${outdir} ${fastq_path}
