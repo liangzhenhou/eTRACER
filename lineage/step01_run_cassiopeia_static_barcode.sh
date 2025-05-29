@@ -13,4 +13,4 @@
 outdir='/data/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/T1/a3026/cassiopeia_result'
 fastq_path='/data/liangzhen/jinhua_jilab_project/data/DNA_Amplicon/a3026/T1/staticBC_R1.fastq.gz,/data/liangzhen/jinhua_jilab_project/data/DNA_Amplicon/a3026/T1/staticBC_R2.fastq.gz'
 
-/home/liangzhen/anaconda3/envs/cassiopeia/bin/python3.8 /data/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/staticBC_umi_preprocessing.py ${outdir} ${fastq_path}
+/home/liangzhen/anaconda3/envs/cassiopeia/bin/python3.8 cassiopeia_static_barcode_func.py ${outdir} ${fastq_path}
