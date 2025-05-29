@@ -4,10 +4,10 @@
 #SBATCH -o /data/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/log/staticBC_umi_preprocessing_T1.out       
 #SBATCH -e /data/liangzhen/jinhua_jilab_project/script/AMPLICON/a3026/log/staticBC_umi_preprocessing_T1.error
 #SBATCH -p fat
-#SBATCH -N 1                      # apply for one node
+#SBATCH -N 1                     
 #SBATCH -n 20
 #SBATCH --mem=100G
-#SBATCH -t 00:00:00                # time limitation
+#SBATCH -t 00:00:00                
 
 
 outdir='/data/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/T1/a3026/cassiopeia_result'
