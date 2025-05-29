@@ -7,11 +7,6 @@ import sys
 import re
 import numpy as np
 
-#gene_names=['Calr', 'Myl6', 'Calm2', 'Rpl39', 'Cfl1', 'Acta1', 'Hsp90b1', 'Calm1', 'Hint1', 'Btf3', 'Lgals1', 'Slc25a3', 'Tpt1', 'Hsp90ab1', 'Fth1']
-#innerBCs=['AATCCG', 'AATCGC', 'AAGTCG', 'AAGCTC', 'AACGTG', 'AACTGC', 'ATAGCG', 'ATTCCG', 'ATGCCA', 'ATGTTC', 'ATCACG', 'ATCCAG', 'ACAGTG', 'ACTCTG', 'ACTTGA', 'ACGATC']
-#cut_sites = [80,91,93,87,63,89,89,84,86,94,48,87,89,85,89] 
-
-
 innerBC = sys.argv[1]
 gene_name = sys.argv[2]
 cut_site = sys.argv[3] 
@@ -27,8 +22,6 @@ allow_allele_conflicts = False
 verbose = True
 cassiopeia.pp.setup(output_directory, verbose=verbose)
 
-
-'''
 # convert
 bam_fp = cas.pp.convert_fastqs_to_unmapped_bam(
 	input_files,
@@ -63,10 +56,9 @@ umi_table = cas.pp.collapse_umis(
 	method='likelihood',
 	n_threads=n_threads,
 )
-'''
+
 
 umi_table = pd.read_csv(output_directory+'/'+ gene_name + '_unmapped_filtered_corrected_sorted.collapsed.txt',header=0,sep='\t')
-
 
 umi_table = cas.pp.resolve_umi_sequence(
     umi_table,
@@ -93,10 +85,7 @@ umi_table = cas.pp.call_alleles(
     context=False,
 )
 
-
 umi_table.to_csv(output_directory + '/' + 'umi_table.csv')
-
-#print(cut_site)
 
 def M_length_stat(cigar):
     length_M = 0
@@ -218,7 +207,5 @@ umi_table = cas.pp.error_correct_umis(
             allow_allele_conflicts=True,
             n_threads=10
         )
-
-
 
 umi_table.to_csv(output_directory + '/' + 'umi_table_filtered.csv')
