@@ -10,4 +10,4 @@
 #SBATCH --mem=500G
 #SBATCH -t 00:00:00                # time limitation
 
-/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/SPATIAL/T2/T2_target_split.py
+/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/SPATIAL/T2/fastq_split_by_target.py
