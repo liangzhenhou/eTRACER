@@ -13,4 +13,4 @@ outdir='/syn1/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/multiome/cassio
 fastq_path='/syn1/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/multiome/fastq/staticBC_{}.fq.gz'
 
 
-/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/AMPLICON/multiome/RNA/staticBC_umi_preprocessing.py ${outdir} ${fastq_path}
+/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/AMPLICON/multiome/RNA/cassiopeia_func_static_barcode_multiome.py ${outdir} ${fastq_path}
