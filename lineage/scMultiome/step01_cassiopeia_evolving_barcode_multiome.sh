@@ -22,4 +22,4 @@ outdir=/syn1/liangzhen/jinhua_jilab_project/result/DNA_Amplicon/multiome/cassiop
 mkdir -p ${outdir}
 
 
-/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/AMPLICON/multiome/RNA/cassiopeia_func.py ${innerBC} ${gene_name}  ${cut_site} ${outdir} ${fastq_path}
+/home/liangzhen/anaconda3/envs/cassiopeia2/bin/python3.8 /syn1/liangzhen/jinhua_jilab_project/script/AMPLICON/multiome/RNA/cassiopeia_func_evolving_barcode_multiome.py ${innerBC} ${gene_name}  ${cut_site} ${outdir} ${fastq_path}
