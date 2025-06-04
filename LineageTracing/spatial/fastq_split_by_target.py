@@ -30,7 +30,7 @@ def get_innerBC(r2_line):
     num_Ns = sum([c=='N' for c in innerBC])
     innerBC_ref = ['AATCCG','AATCGC','AAGTCG','AAGCTC','AACGTG','AACTGC','ATAGCG',
                   'ATTCCG','ATGCCA','ATGTTC','ATCACG','ATCCAG','ACAGTG','ACTCTG','ACTTGA',
-                  'ACGATC']
+                  'ACGATC'] # target gene sequencing index
     if num_Ns > 1: return None 
     elif num_Ns == 1 and innerBC == 'ANTCCG':return None # will miss some reads
     elif num_Ns == 1 and np.any([innerBC.replace('N',c) in innerBC_ref for c in 'ACTG']): 
