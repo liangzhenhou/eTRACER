@@ -1,0 +1,1 @@
+/usr/local/bin/fastp --trim_poly_g --detect_adapter_for_pe -i RawData/BL1_1/BL1_1.RawData.R1.fastq.gz -I RawData/BL1_1/BL1_1.RawData.R2.fastq.gz -o CleanData/BL1_1/BL1_1.CleanData.R1.fastq.gz -O CleanData/BL1_1/BL1_1.CleanData.R2.fastq.gz -j Output/01.Reads_Filter/BL1_1/BL1_1.fastp.json -h Output/01.Reads_Filter/BL1_1/BL1_1.fastp.html --thread 10
