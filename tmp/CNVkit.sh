@@ -12,6 +12,6 @@
 
 sample=$(cat /syn1/liangzhen/jinhua_jilab_project/result/WES/fastq/sample.list | sed -n ${SLURM_ARRAY_TASK_ID}p)
 
-
+source /home/liangzhen/anaconda3/bin/activate cnvkit
 
 /home/liangzhen/anaconda3/envs/cnvkit/bin/cnvkit.py batch /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.bam -f /syn1/liangzhen/GATK_mm10_resource/GRCm38_68.fa -n -t /syn1/liangzhen/WES_bed/agilent_mouse_region.mm10.fixed.bed -d /syn1/liangzhen/jinhua_jilab_project/result/WES/results/3.CNVkit/${sample}/ --scatter --diagram
