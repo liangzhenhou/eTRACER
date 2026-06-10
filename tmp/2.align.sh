@@ -17,7 +17,7 @@ cd /syn1/liangzhen/jinhua_jilab_project/result/WES/bam
 
 source /data/xieduo/WES_pipe/pipeline/bin/Miniconda3/bin/activate gatk_4.2.6.1
 
-bwa mem -M -t 3 -R "@RG\tID:${sample}\tSM:${sample}\tPL:ILLUMINA\tLB:${sample}" /syn1/liangzhen/GATK_mm10_resource/GRCm38_68.fa /syn1/liangzhen/jinhua_jilab_project/result/WES/cleandata/EP1_1.clean.fastq.gz /syn1/liangzhen/jinhua_jilab_project/result/WES/cleandata/EP1_2.clean.fastq.gz > /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam && samtools view -bS /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam > /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.bam && rm -f /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam
+bwa mem -M -t 3 -R "@RG\tID:${sample}\tSM:${sample}\tPL:ILLUMINA\tLB:${sample}" /syn1/liangzhen/GATK_mm10_resource/GRCm38_68.fa /syn1/liangzhen/jinhua_jilab_project/result/WES/cleandata/${sample}_1.clean.fastq.gz /syn1/liangzhen/jinhua_jilab_project/result/WES/cleandata/${sample}_2.clean.fastq.gz > /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam && samtools view -bS /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam > /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.bam && rm -f /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sam
 
 samtools sort -o /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sorted.bam -O bam -T ${sample} /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.bam 
 mv /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.sorted.bam /syn1/liangzhen/jinhua_jilab_project/result/WES/bam/${sample}.bam 
