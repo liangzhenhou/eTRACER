@@ -1,8 +1,0 @@
-
-library(dbscan)
-
-df <- spatial@meta.data
-knn_result <- kNN(df[, c("x", "y")], k = 10)  
-
-df$neighbors <- apply(knn_result$id, 1, function(x) list(x))
-df$neighbor_distances <- apply(knn_result$dist, 1, function(x) list(x))
